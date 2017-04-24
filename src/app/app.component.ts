@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   <h1>
     {{title}}
   </h1>
+  
+    <cfp-login></cfp-login>
+    <cfp-password-recovery></cfp-password-recovery>
+    <cfp-register></cfp-register>
   `,
   styles: []
 })
