@@ -3,12 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'cfp-root',
   template: `
-  <h1>
-    {{title}}
-  </h1>
+  
+    <cfp-new-paper></cfp-new-paper>
+    
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'cfp works!';
 }
