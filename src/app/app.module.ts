@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {ProfileModule} from "./profile/profile.module";
+import {LoginModule} from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import {ProfileModule} from "./profile/profile.module";
     BrowserModule,
     FormsModule,
     HttpModule,
-    ProfileModule
+    ProfileModule,
+    HttpModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
