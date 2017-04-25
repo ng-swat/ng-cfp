@@ -1,0 +1,26 @@
+<div class="navi">
+  <div class="nav-top-header logo">
+    <a href="#"><span><img class='avatar hidden-xs hidden-sm circle-logo' src="{{user.file}}"
+                           alt="">{{user.name}}</span></a>
+  </div>
+  <div class="nav-menu">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" *ngFor="let menu of menus">
+        <a href="#">{{menu.name}}</a>
+        <span class="icon-menu {{menu.iconClass}}" aria-hidden="true"></span>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--div class="nav-container" style="clear: both">
+  navigation works!
+  <div class="nav-top-header"><a  href="#"><span><img class='avatar' src="{{user.file}}" alt="">{{user.name}}</span></a></div>
+  <div class="nav-menu">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" *ngFor="let menu of menus">
+        <a href="#">{{menu.name}}</a>
+        <span class="icon-menu {{menu.iconClass}}" aria-hidden="true"></span>
+      </li>
+    </ul>
+  </div>
+</div-->
