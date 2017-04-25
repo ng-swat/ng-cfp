@@ -7,9 +7,7 @@ import { AppComponent } from './app.component';
 import {LoginModule} from './login/login.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
