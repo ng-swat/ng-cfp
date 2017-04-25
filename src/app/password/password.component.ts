@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, FormBuilder, Validators} from "@angular/forms";
+import {FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {Password} from '../shared/password';
 
 @Component({
   selector: 'cfp-password',
@@ -8,8 +9,10 @@ import {FormControl, FormGroup, FormBuilder, Validators} from "@angular/forms";
 })
 export class PasswordComponent implements OnInit {
   public pwdForm: FormGroup;
+  public password:Password;
 
-  constructor(builder: FormBuilder) {
+  constructor(builder: FormBuilder, password:Password) {
+    this.password= password;
     this.pwdForm = builder.group({
       newpwd: [null, [
         Validators.required,
@@ -20,11 +23,6 @@ export class PasswordComponent implements OnInit {
         Validators.minLength(8)
       ]]
     });
-
-    /*this.pwdForm = new FormGroup({
-     newpwd: new FormControl(),
-     repeatednewpwd: new FormControl(),
-     });*/
   }
 
   get newpwd(): FormControl {
