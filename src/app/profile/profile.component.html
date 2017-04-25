@@ -1,157 +1,181 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <h1 class="title">Profile</h1>
-    </div>
-    <div class="col-sm-6 pull-right">
+<form [formGroup]="control" (ngSubmit)="SaveProfile()">
+  <div class="container">
+    <div [formGroup]="GeneralInfo">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1 class="title">Profile</h1>
+        </div>
+        <div class="col-sm-6 pull-right">
       <span>
         <img
           src="http://speaker.codemotionworld.com/layout/c4p/img/speaker/codemotion-logo_profile.png"
           alt="Codemotion"/>
       </span>
-    </div>
-  </div>
-  <div class="separator"></div>
-  <div class="alert alert-success" role="alert">
-    <strong>
-      <h1>Welcome!</h1>
-      Please fill out all the required fields (marked with an asterisk). All your profile information, except for your
-      telephone number and your e-mail address, could be published in the CodemotionWorld web site.
-    </strong>
-  </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="alert alert-success" role="alert">
+        <strong>
+          <h1>Welcome!</h1>
+          Please fill out all the required fields (marked with an asterisk). All your profile information, except for
+          your
+          telephone number and your e-mail address, could be published in the CodemotionWorld web site.
+        </strong>
+      </div>
 
-  <div class="row">
-    <div class="col-xs-3">
-      <img
-        src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/13895111_10205121212668670_4075659053528365697_n.jpg?oh=408bdb23bf87b22d3b6b222f70cb483c&oe=599553B4"
-        class="img-circle img-responsive"/>
+      <div class="row">
+        <div class="col-xs-3">
+          <img
+            src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/13895111_10205121212668670_4075659053528365697_n.jpg?oh=408bdb23bf87b22d3b6b222f70cb483c&oe=599553B4"
+            class="img-circle img-responsive"/>
+        </div>
+        <div class="col-sm-9 form-group">
+          <label class="control-label col-sm-2">Email:</label>
+          <div class="col-sm-10">
+            <label><p class="form-control-static">{{Email}}</p></label>
+          </div>
+          <br/>
+
+          <div class="col-xs-4"><label>Name *</label><input type="text" class="form-control" placeholder="Name"
+                                                            formControlName="Name"></div>
+          <div class="col-xs-4"><label>Surname *</label><input type="text" class="form-control" placeholder="Surname"
+                                                               formControlName="Surname">
+          </div>
+          <div class="checkbox-inline"><label><input type="checkbox" formControlName="AllowImageUsage">You can use my
+            picture to promote the event.
+            *</label>
+          </div>
+          <br/><br/>
+        </div>
+        <div class="row col-sm-12"></div>
+        <label>Biography *</label>
+        <textarea formControlName="Biography" class="form-control" maxlength="600" name="biography"></textarea>
+        <small>600 characters max</small>
+        <br>
+      </div>
     </div>
-    <div class="col-sm-9 form-group">
-      <label class="control-label col-sm-2">Email:</label>
-      <div class="col-sm-10">
-        <label><p class="form-control-static">someone@example.com</p></label>
+
+    <div class="separator"></div>
+
+    <div [formGroup]="EmploymentInfo">
+      <div class="form-group"></div>
+      <div class="row">
+        <div class="col-sm-4"><label>Company *</label><input type="text" placeholder="Company" class="form-control"
+                                                             formControlName="Company"></div>
+        <div class="col-sm-4"><label>Role *</label><input type="text" placeholder="Role" class="form-control"
+                                                          formControlName="Role"></div>
+        <div class="col-sm-1">
+          <button style="margin-top:25px" type="button" class="form-control btn btn-default">X</button>
+        </div>
+        <div class="col-sm-3">
+          <button style="margin-top:25px" type="button" class="form-control btn btn-warning">Add Company +</button>
+        </div>
       </div>
       <br/>
+    </div>
+    <div class="separator"></div>
 
-      <div class="col-xs-4"><label>Name *</label><input type="text" class="form-control" placeholder="Name"></div>
-      <div class="col-xs-4"><label>Surname *</label><input type="text" class="form-control" placeholder="Surname"></div>
-      <div class="checkbox-inline"><label><input type="checkbox">You can use my picture to promote the event. *</label>
-      </div>
-      <br/><br/>
-    </div>
-    <div class="row col-sm-12"></div>
-    <label>Biography *</label>
-    <textarea class="form-control" maxlength="600" name="biography"></textarea>
-    <small>600 characters max</small>
-    <br>
-  </div>
-  <div class="separator"></div>
-
-  <div class="form-group"></div>
-  <div class="row">
-    <div class="col-sm-4"><label>Company *</label><input type="text" placeholder="Company" class="form-control"></div>
-    <div class="col-sm-4"><label>Role *</label><input type="text" placeholder="Role" class="form-control"></div>
-    <div class="col-sm-1">
-      <button style="margin-top:25px" type="button" class="form-control btn btn-default">X</button>
-    </div>
-    <div class="col-sm-3">
-      <button style="margin-top:25px" type="button" class="form-control btn btn-warning">Add Company +</button>
-    </div>
-  </div>
-  <br/>
-  <div class="separator"></div>
-
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-5">
-        <label>Nationality * <input placeholder="Select" type="text" class="form-control"></label>
-      </div>
-      <div class="col-sm-5">
-        <label>Where are you based * <input placeholder="city - country" type="text" class="form-control"></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Phone * <input placeholder="It won't be displayed on your profile" type="text"
-                              class="form-control"></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Website <input placeholder="http://www.something.com" type="text" class="form-control"></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-5">
-        <label>Twitter <input placeholder="@Username" type="text" class="form-control"></label>
-      </div>
-      <div class="col-sm-5">
-        <label>LinkedIn <input placeholder="include http://" type="text" class="form-control"></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-5">
-        <label>Facebook <input placeholder="include http://" type="text" class="form-control"></label>
-      </div>
-      <div class="col-sm-5">
-        <label>Github / BitBucket <input placeholder="include http://" type="text" class="form-control"></label>
-      </div>
-    </div>
-  </div>
-
-  <div class="separator"></div>
-
-  <div class="form-group">
-    <label>Languages in which you are confident to hold a speech</label>
-    <div class="row">
-      <div class="col-sm-5">
-        <label>Primary Language <input placeholder="Select" type="text" class="form-control"></label>
-      </div>
-      <div class="col-sm-5">
-        <label>Secondary Language <input placeholder="Select" type="text" class="form-control"></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-5">
-        <label>Other<input placeholder="Select" type="text" class="form-control"></label>
-      </div>
-      <div class="col-sm-5">
-        <label>Other<input placeholder="Select" type="text" class="form-control"></label>
-      </div>
-    </div>
-  </div>
-
-  <div class="separator"></div>
-
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-5">
-        <label>Are you a memeber of communities?</label>
-        <div class="col-lg-2">
-          <label class="radio-inline"><input type="radio" name="optradio">Yes</label>
+    <div [formGroup]="Social">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-5">
+            <label>Nationality * <input placeholder="Select" type="text" class="form-control"
+                                        formControlName="Nationality"></label>
+          </div>
+          <div class="col-sm-5">
+            <label>Where are you based * <input placeholder="city - country" type="text" class="form-control"
+                                                formControlName="CityCountry"></label>
+          </div>
         </div>
-        <div class="col-lg-2">
-          <label class="radio-inline"><input type="radio" name="optradio">No</label>
+        <div class="row">
+          <div class="col-sm-12">
+            <label>Phone * <input placeholder="It won't be displayed on your profile" type="text"
+                                  class="form-control" formControlName="Phone"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <label>Website <input placeholder="http://www.something.com" type="text" class="form-control"
+                                  formControlName="Website"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5">
+            <label>Twitter <input placeholder="@Username" type="text" class="form-control"
+                                  formControlName="Twitter"></label>
+          </div>
+          <div class="col-sm-5">
+            <label>LinkedIn <input placeholder="include http://" type="text" class="form-control"
+                                   formControlName="Linkedin"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5">
+            <label>Facebook <input placeholder="include http://" type="text" class="form-control"
+                                   formControlName="Facebook"></label>
+          </div>
+          <div class="col-sm-5">
+            <label>Github / BitBucket <input placeholder="include http://" type="text" class="form-control"
+                                             formControlName="Git"></label>
+          </div>
         </div>
       </div>
-      <div class="col-sm-5 pull-right">
-        <label>Which one?</label>
-        <input type="text" class="form-control" placeholder="Community name">
-        <small>Separate different communities name with comma.</small>
+    </div>
+    <div class="separator"></div>
+    <div [formGroup]="Languages">
+      <div class="form-group">
+        <label>Languages in which you are confident to hold a speech</label>
+        <div class="row">
+          <div class="col-sm-5">
+            <label>Primary Language <input placeholder="Select" type="text" class="form-control"
+                                           formControlName="Primary"></label>
+          </div>
+          <div class="col-sm-5">
+            <label>Secondary Language <input placeholder="Select" type="text" class="form-control"
+                                             formControlName="Secondary"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5">
+            <label>Other<input placeholder="Select" type="text" class="form-control" formControlName="Third"></label>
+          </div>
+          <div class="col-sm-5">
+            <label>Other<input placeholder="Select" type="text" class="form-control" formControlName="Fourth"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div [formGroup]="CommunityInfo">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-5">
+            <label>Are you a memeber of communities?</label>
+            <div class="col-lg-2">
+              <label class="radio-inline"><input type="radio"  value="true"  formControlName="IsCommunityMemeber">Yes</label>
+              <label class="radio-inline"><input type="radio" value="false"  formControlName="IsCommunityMemeber">No</label>
+            </div>
+          </div>
+          <div class="col-sm-5 pull-right">
+            <label>Which one?</label>
+            <input type="text" class="form-control" placeholder="Community name" formControlName="Community">
+            <small>Separate different communities name with comma.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div [formGroup]="Agreement">
+      <div class="form-group">
+        <div class="row">
+          <div class="checkbox-inline col-sm-6"><input type="checkbox" formControlName="Agrees">
+            <small>I authorize Codemotion to send me information about the conference. *</small>
+          </div>
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-success pull-right">Apply</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <hr>
-  <div class="form-group">
-    <div class="row">
-      <div class="checkbox-inline col-sm-6"><input type="checkbox">
-        <small>I authorize Codemotion to send me information about the conference. *</small>
-      </div>
-      <div class="col-sm-6">
-        <button type="button" class="btn btn-success pull-right">Apply</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-
+</form>
