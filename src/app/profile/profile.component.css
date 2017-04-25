@@ -6,5 +6,8 @@
   width: 100%;
 }
 
+input.ng-invalid,textarea.ng-invalid{
+  background-color: #ffd8d4;
+}
 
 
