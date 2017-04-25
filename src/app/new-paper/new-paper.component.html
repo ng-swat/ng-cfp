@@ -1,0 +1,219 @@
+
+
+<div class="container">
+  <div class="row">
+    <form class="form-horizontal">
+      <fieldset>
+
+        <h1>New Paper</h1>
+
+        <hr>
+
+        <div class="EventDetails">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="eventToSubmit">Event to submit *</label>
+              <select id="eventToSubmit" name="declineType" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="Berlin17">Berlin 2017</option>
+                <option value="Amsterdam17">Amsterdam 2017</option>
+                <option value="Dubai17">Dubai 2017</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="lang">Language *</label>
+              <select id="lang" name="lang" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="Eng">English</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <hr>
+
+        <div class="SpeechDetails">
+          <div class="row">
+            <button type="button" class="col-md-3 import-btn">Import From Older Paper</button>
+            <div class="col-md-9">
+              <label class="control-label" for="title">Title</label>
+              <input id="title" name="title" placeholder="Title" class="form-control input-md" required="" type="text">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <label class="control-label" for="abstract">Abstract*</label>
+              <textarea id="abstract" class="abstract-div" maxlength="600" rows="4" cols="50">
+          </textarea>
+            </div>
+          </div>
+          <div class="row">
+            <small>600 charachters max</small>
+          </div>
+        </div>
+
+
+        <hr>
+
+
+        <div class="Topics">
+          <p>Topics*</p>
+        </div>
+
+
+        <hr>
+
+
+        <div class="SessionDetails">
+
+          <div class="row">
+            <label class="col-md-6">Session type * ("lab" is only available in Rome and
+              Milan)</label>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <select name="SessionType" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="Berlin17">lab</option>
+                <option value="Amsterdam17">meetup</option>
+                <option value="Dubai17">talk</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
+
+          <div class="row">
+            <label class="col-md-6">Level*</label>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <select name="Level" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="Berlin17">Beginner</option>
+                <option value="Amsterdam17">Intermediate</option>
+                <option value="Dubai17">Advanced</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
+
+          <div class="row">
+            <label class="col-md-6">Length*</label>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <select name="Length" class="form-control">
+
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <small>
+              If your talk is longer than these options,
+              please write it on "Technical and logistical requirements for your speech" field below.
+            </small>
+          </div>
+          <div class="row">
+
+          </div>
+          <div class="row">
+            <label class="col-md-6" for="tags">Tags</label>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input id="tags" name="tags" placeholder="web,UX,UI,HTML5" class="form-control input-md" required=""
+                     type="text">
+            </div>
+          </div>
+        </div>
+
+
+        <hr>
+
+        <div class="co_speakers">
+          <div class="row">
+            <label for="tags">Co-Speakers</label>
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-4">
+              <input id="tags1" name="tags" placeholder="Co-Speakers email edress" class="form-control" required=""
+                     type="text">
+            </div>
+            <div class="col-md-2">
+              <input type="button" class="btn btn-default" value="X">
+            </div>
+
+            <div class="col-md-6">
+              <input type="button" class="btn btn-default co-speaker-btn" value="Add co-speaker">
+            </div>
+          </div>
+        </div>
+
+
+        <hr>
+
+
+        <div class="RequairmentsAndNotes">
+          <div class="row">
+            <label for="requirements">Technical and logistical requirements for your speech</label>
+          </div>
+          <div class="row">
+            <textarea id="requirements" maxlength="400" rows="4" cols="50">
+            </textarea>
+          </div>
+          <div class="row">
+            <small>400 characters max</small>
+          </div>
+
+          <div class="row">
+            <label for="abstract">Note</label>
+          </div>
+          <div class="row">
+            <textarea id="note"
+                      placeholder=" Please tell us if you have particular requirements, for your laptop, internet access, audio connection..."
+                      maxlength="400" rows="4" cols="50">
+            </textarea>
+          </div>
+          <div class="row">
+            <small>400 characters max</small>
+          </div>
+        </div>
+
+
+        <hr>
+
+
+        <div class="FormButtons">
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="back"></label>
+            <div class="col-md-2">
+              <button id="back" name="back" class="btn btn-default back-btn bottomButtons">Back</button>
+            </div>
+
+            <label class="col-md-2 " for="saveAsDraft"></label>
+            <div class="col-md-2">
+              <button id="saveAsDraft" name="saveAsDraft" class="btn btn-default saveAsDraft-btn bottomButtons">Save As
+                Draft
+              </button>
+            </div>
+
+            <label class="col-md-2 control-label" for="send"></label>
+            <div class="col-md-2">
+              <button id="send" name="send" class="btn btn-default send-btn bottomButtons">Send</button>
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+
+  </div>
+</div>
+
