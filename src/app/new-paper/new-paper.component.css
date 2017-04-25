@@ -50,6 +50,8 @@ input , textarea , select{
   background: #00b36c;
 }
 
-.submitted textarea.ng-invalid , .submitted select.ng-invalid , .submitted input.ng-invalid{
+.submitted textarea.ng-invalid, 
+.submitted select.ng-invalid, 
+.submitted input.ng-invalid{
   background: lightyellow;
 }
