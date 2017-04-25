@@ -33,29 +33,33 @@ export class PasswordComponent implements OnInit {
     return <FormControl> this.pwdForm.get('repeatednewpwd');
   }
 
+  private checkError(password) {
+    if(password.control.errors !== null) {
+      console.group(`${password.label} errors`);
+      console.log(password.control.errors);
+      console.groupEnd();
+    }
+  }
 
-  public login() {
-    if(this.newpwd.errors !== null) {
-      console.group('newpwd errors');
-      console.log(this.newpwd.errors);
-      console.groupEnd();
-    }
-    if(this.repeatednewpwd.errors !== null) {
-      console.group('repeatednewpwd errors');
-      console.log(this.repeatednewpwd.errors);
-      console.groupEnd();
-    }
-    if(this.newpwd.errors === null &&
-      this.repeatednewpwd.errors === null &&
-      this.newpwd.value !== this.repeatednewpwd.value) {
-      this.repeatednewpwd.setErrors({nonIdenticalPwd:true});
+  private validateIdenticalPwd(newpwd, repeatednewpwd) {
+    if(newpwd.errors === null &&
+      repeatednewpwd.errors === null &&
+      newpwd.value !== repeatednewpwd.value) {
+      repeatednewpwd.setErrors({nonIdenticalPwd:true});
       //setTimeout(() => this.repeatednewpwd.setErrors(null), 5000);
     }
-    else if(this.repeatednewpwd.hasError(`nonIdenticalPwd`)) {
-      this.repeatednewpwd.setErrors(null);
+    else if(repeatednewpwd.hasError(`nonIdenticalPwd`)) {
+      repeatednewpwd.setErrors(null);
     }
+  }
+
+  public save() {
+    this.checkError({control:this.newpwd, label:'New Password'});
+    this.checkError({control:this.repeatednewpwd, label:'Repeat New Password'});
+    this.validateIdenticalPwd(this.newpwd,this.repeatednewpwd);
     if(this.pwdForm.valid) {
       console.log(this.pwdForm.value);
+      this.password.update(this.newpwd.value);
     }
   }
 

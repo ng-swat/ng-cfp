@@ -17,7 +17,8 @@ import { Component } from '@angular/core';
         <header>
           <div class="col-md-9">
             <div class="hidden-xs hidden-sm">
-              <cfp-password></cfp-password>
+              <!--cfp-password></cfp-password-->
+              <router-outlet></router-outlet>
             </div>
           </div>
         </header>

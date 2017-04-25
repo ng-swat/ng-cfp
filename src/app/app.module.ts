@@ -5,8 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {NavigationModule} from './navigation/navigation.module';
-import {PasswordModule} from "./password/password.module";
+import {PasswordModule} from './password/password.module';
+import {PasswordComponent} from './password/password.component';
+import {RouterModule} from '@angular/router';
 
+export const routes = [
+  {path:'', component: PasswordComponent},
+  {path:'password', component: PasswordComponent}
+];
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +22,8 @@ import {PasswordModule} from "./password/password.module";
     FormsModule,
     HttpModule,
     NavigationModule,
-    PasswordModule
+    PasswordModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

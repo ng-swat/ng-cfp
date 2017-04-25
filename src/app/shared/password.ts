@@ -1,8 +1,8 @@
 export class Password {
   constructor() {
   }
-  update() {
-    console.log(`Password changed`);
+  update(password) {
+    console.log(`Password ${password} changed`);
   }
 
 }
