@@ -1,19 +1,33 @@
 
+<<<<<<< HEAD
 
 <div class="container">
   <div class="row">
     <form class="form-horizontal">
+=======
+<div class="container">
+  <div class="row">
+    <form [formGroup]="newPaperFormInterface" [ngClass]="{'submitted':ifSubmitted}" (ngSubmit)="sendForm()" class="form-horizontal">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
       <fieldset>
 
         <h1>New Paper</h1>
 
         <hr>
 
+<<<<<<< HEAD
         <div class="EventDetails">
           <div class="row">
             <div class="col-md-6">
               <label for="eventToSubmit">Event to submit *</label>
               <select id="eventToSubmit" name="declineType" class="form-control">
+=======
+        <div formGroupName="EventDetails">
+          <div class="row">
+            <div class="col-md-6">
+              <label>Event to submit *</label>
+              <select formControlName="EventToSubmit" name="declineType" class="form-control">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
                 <option value="" disabled>Select...</option>
                 <option value="Berlin17">Berlin 2017</option>
                 <option value="Amsterdam17">Amsterdam 2017</option>
@@ -21,8 +35,13 @@
               </select>
             </div>
             <div class="col-md-6">
+<<<<<<< HEAD
               <label for="lang">Language *</label>
               <select id="lang" name="lang" class="form-control">
+=======
+              <label>Language *</label>
+              <select formControlName="Language" name="lang" class="form-control">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
                 <option value="" disabled>Select...</option>
                 <option value="Eng">English</option>
               </select>
@@ -33,22 +52,38 @@
 
         <hr>
 
+<<<<<<< HEAD
         <div class="SpeechDetails">
           <div class="row">
             <button type="button" class="col-md-3 import-btn">Import From Older Paper</button>
             <div class="col-md-9">
               <label class="control-label" for="title">Title</label>
               <input id="title" name="title" placeholder="Title" class="form-control input-md" required="" type="text">
+=======
+
+        <div formGroupName="SpeechDetails">
+          <div class="row">
+            <button type="button" class="col-md-3 import-btn">Import From Older Paper</button>
+            <div class="col-md-9">
+              <label class="control-label">Title*</label>
+              <input formControlName="Title" name="title" placeholder="Title" class="form-control input-md" required="" type="text">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
+<<<<<<< HEAD
               <label class="control-label" for="abstract">Abstract*</label>
               <textarea id="abstract" class="abstract-div" maxlength="600" rows="4" cols="50">
+=======
+              <label class="control-label">Abstract*</label>
+              <textarea formControlName="Abstract" class="abstract-div" maxlength="600" rows="4" cols="50">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
           </textarea>
             </div>
           </div>
           <div class="row">
+<<<<<<< HEAD
             <small>600 charachters max</small>
           </div>
         </div>
@@ -59,13 +94,27 @@
 
         <div class="Topics">
           <p>Topics*</p>
+=======
+            <small>600 characters max</small>
+          </div>
+
+
+          <hr>
+
+          <!--Add binding here to the radio of the Topic-->
+          <p>Topic*</p>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
         </div>
 
 
         <hr>
 
 
+<<<<<<< HEAD
         <div class="SessionDetails">
+=======
+        <div formGroupName="SessionDetails">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
 
           <div class="row">
             <label class="col-md-6">Session type * ("lab" is only available in Rome and
@@ -73,11 +122,19 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+<<<<<<< HEAD
               <select name="SessionType" class="form-control">
                 <option value="" disabled>Select...</option>
                 <option value="Berlin17">lab</option>
                 <option value="Amsterdam17">meetup</option>
                 <option value="Dubai17">talk</option>
+=======
+              <select formControlName="SessionType" name="SessionType" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="lab">lab</option>
+                <option value="meetup">meetup</option>
+                <option value="talk">talk</option>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
               </select>
             </div>
           </div>
@@ -90,11 +147,19 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+<<<<<<< HEAD
               <select name="Level" class="form-control">
                 <option value="" disabled>Select...</option>
                 <option value="Berlin17">Beginner</option>
                 <option value="Amsterdam17">Intermediate</option>
                 <option value="Dubai17">Advanced</option>
+=======
+              <select formControlName="Level" name="Level" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
               </select>
             </div>
           </div>
@@ -107,8 +172,15 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+<<<<<<< HEAD
               <select name="Length" class="form-control">
 
+=======
+              <select formControlName="Length" name="Length" class="form-control">
+                <option value="" disabled>Select...</option>
+                <option value="30_min">30 Min</option>
+                <option value="40_min">40 Min</option>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
               </select>
             </div>
           </div>
@@ -122,12 +194,20 @@
 
           </div>
           <div class="row">
+<<<<<<< HEAD
             <label class="col-md-6" for="tags">Tags</label>
           </div>
           <div class="row">
             <div class="col-md-6">
               <input id="tags" name="tags" placeholder="web,UX,UI,HTML5" class="form-control input-md" required=""
                      type="text">
+=======
+            <label class="col-md-6">Tags</label>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input formControlName="Tags" name="tags" placeholder="web,UX,UI,HTML5" class="form-control input-md" type="text">
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
             </div>
           </div>
         </div>
@@ -135,15 +215,25 @@
 
         <hr>
 
+<<<<<<< HEAD
         <div class="co_speakers">
           <div class="row">
             <label for="tags">Co-Speakers</label>
+=======
+        <div formGroupName="CoSpeakers">
+          <div class="row">
+            <label>Co-Speakers</label>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
           </div>
 
           <div class="row">
 
             <div class="col-md-4">
+<<<<<<< HEAD
               <input id="tags1" name="tags" placeholder="Co-Speakers email edress" class="form-control" required=""
+=======
+              <input (ngClick)="addToCoSpeakers()"  name="tags" placeholder="Co-Speakers email address" class="form-control" required=""
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
                      type="text">
             </div>
             <div class="col-md-2">
@@ -154,12 +244,19 @@
               <input type="button" class="btn btn-default co-speaker-btn" value="Add co-speaker">
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+          <div class="row" *ngFor="let speaker of coSpeakersArr">{{speaker}}</div>
+
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
         </div>
 
 
         <hr>
 
 
+<<<<<<< HEAD
         <div class="RequairmentsAndNotes">
           <div class="row">
             <label for="requirements">Technical and logistical requirements for your speech</label>
@@ -167,12 +264,23 @@
           <div class="row">
             <textarea id="requirements" maxlength="400" rows="4" cols="50">
             </textarea>
+=======
+        <div formGroupName="Requirements">
+          <div class="row">
+            <label>Technical and logistical requirements for your speech</label>
+          </div>
+          <div class="row">
+            <textarea formControlName="Requirements"
+                      placeholder=" Please tell us if you have particular requirements, for your laptop, internet access, audio connection..."
+                      maxlength="400" rows="4" cols="50"></textarea>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
           </div>
           <div class="row">
             <small>400 characters max</small>
           </div>
 
           <div class="row">
+<<<<<<< HEAD
             <label for="abstract">Note</label>
           </div>
           <div class="row">
@@ -180,6 +288,13 @@
                       placeholder=" Please tell us if you have particular requirements, for your laptop, internet access, audio connection..."
                       maxlength="400" rows="4" cols="50">
             </textarea>
+=======
+            <label>Notes</label>
+          </div>
+          <div class="row">
+            <textarea formControlName="Notes"
+                      maxlength="400" rows="4" cols="50"></textarea>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
           </div>
           <div class="row">
             <small>400 characters max</small>
@@ -204,9 +319,15 @@
               </button>
             </div>
 
+<<<<<<< HEAD
             <label class="col-md-2 control-label" for="send"></label>
             <div class="col-md-2">
               <button id="send" name="send" class="btn btn-default send-btn bottomButtons">Send</button>
+=======
+            <label class="col-md-2 control-label"></label>
+            <div class="col-md-2">
+              <button type="submit" name="send" class="btn btn-default send-btn bottomButtons">Send</button>
+>>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
             </div>
           </div>
         </div>

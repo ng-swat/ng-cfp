@@ -10,9 +10,10 @@ import { Component } from '@angular/core';
     <cfp-login></cfp-login>
     <cfp-password-recovery></cfp-password-recovery>
     <cfp-register></cfp-register>
+ <cfp-new-paper></cfp-new-paper>
+
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'cfp works!';
 }
