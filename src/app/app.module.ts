@@ -8,9 +8,7 @@ import {ProfileModule} from "./profile/profile.module";
 import {LoginModule} from './login/login.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpModule,
