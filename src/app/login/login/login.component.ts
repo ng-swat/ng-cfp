@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import {LoginInterface} from '../login.interface';
+import {AuthService} from '../../shared/auth.service';
 
 @Component({
   selector: 'cfp-login',
@@ -10,10 +11,11 @@ import {LoginInterface} from '../login.interface';
 export class LoginComponent implements OnInit {
 
   public loginForm: FormGroup;
-  public loginInterface: LoginInterface;
   public formSubmitted: boolean;
+  public authService: AuthService;
 
-  constructor() {
+  constructor(authService: AuthService) {
+    this.authService = authService;
     this.loginForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required]),
@@ -28,6 +30,10 @@ export class LoginComponent implements OnInit {
   login() {
     this.formSubmitted = true;
     console.log(this.loginForm.valid);
+
+    if (this.loginForm.valid) {
+      this.authService.login(this.loginForm.value);
+    }
   }
 
   resetClicked() {

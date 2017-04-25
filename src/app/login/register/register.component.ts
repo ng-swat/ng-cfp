@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from '../../shared/auth.service';
 
 @Component({
   selector: 'cfp-register',
@@ -10,7 +11,9 @@ export class RegisterComponent implements OnInit {
 
   public registerForm: FormGroup;
   public formSubmitted: boolean;
-  constructor() {
+  public authService: AuthService;
+  constructor(authService: AuthService) {
+    this.authService = authService;
     this.registerForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required]),
@@ -24,6 +27,10 @@ export class RegisterComponent implements OnInit {
   register() {
     this.formSubmitted = true;
     console.log('registerForm validation: ', this.registerForm.valid);
+
+    if (this.registerForm.valid) {
+      this.authService.register(this.registerForm.value);
+    }
   }
 
   passwordMatchValidator(formGroup: FormGroup) {
