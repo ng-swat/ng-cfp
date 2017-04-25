@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {NewPaperModule} from './new-paper/new-paper.module';
 import {LoginModule} from './login/login.module';
 
 @NgModule({
@@ -12,6 +13,7 @@ import {LoginModule} from './login/login.module';
     BrowserModule,
     FormsModule,
     HttpModule,
+    NewPaperModule,
     LoginModule
   ],
   providers: [],

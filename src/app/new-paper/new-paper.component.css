@@ -1,0 +1,57 @@
+label{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+small{
+  margin-left: 1.5%;
+}
+input , textarea , select{
+  background: #F6F6F6;
+}
+
+.borderless td, .borderless th {
+  border: none;
+}
+.import-btn {
+  margin-top: 35px;
+  border: solid 1px transparent;
+  background: #F75080;
+  color: white;
+  border-radius: 6px;
+  height: 36px;
+}
+
+.co-speaker-btn {
+  border: solid 1px transparent;
+  background: #E3AC00;
+  border-radius: 6px;
+  color: white;
+}
+
+.abstract-div {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.bottomButtons{
+  border: solid 1px transparent;
+  border-radius: 6px;
+  color: white;
+}
+
+.back-btn{
+  background: #DB381F;
+}
+.saveAsDraft-btn{
+  background: #009EC7;
+}
+.send-btn{
+  background: #00b36c;
+}
+
+.submitted textarea.ng-invalid, 
+.submitted select.ng-invalid, 
+.submitted input.ng-invalid{
+  background: lightyellow;
+}
