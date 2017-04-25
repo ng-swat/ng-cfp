@@ -26,16 +26,8 @@ import { Component } from '@angular/core';
   </div>
   </div>
   `,
-  styles: [`
-    /*:host{
-      margin-left: 20px;
-    }*/
-    /*:host >>> .nav-container >>> div:only-child {*/
-    /*:host >>> .nav-container {
-      max-width: 250px;
-      border-color: red;
-    }*/
-  `]
+  styles: [
+  ]
 })
 export class AppComponent {
   title = 'cfp works!';
