@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
+import {LoginInterface} from '../login.interface';
 
 @Component({
   selector: 'cfp-login',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public loginForm: FormGroup;
+  public loginInterface: LoginInterface;
+  public formSubmitted: boolean;
+
+  constructor() {
+    this.loginForm = new FormGroup({
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      password: new FormControl(null, [Validators.required]),
+      rememberMe: new FormControl()
+    });
+    this.formSubmitted = false;
+  }
 
   ngOnInit() {
   }
 
+  login() {
+    this.formSubmitted = true;
+    console.log(this.loginForm.valid);
+  }
+
+  resetClicked() {
+    this.formSubmitted = false;
+  }
 }
+
