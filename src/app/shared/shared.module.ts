@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import {Password} from "./password";
+import {NgModule} from '@angular/core';
+import {Auth} from 'app/shared/auth';
 
 @NgModule({
-  providers:[Password]
+  providers: [Auth],
 })
-export class SharedModule { }
+export class SharedModule {
+}

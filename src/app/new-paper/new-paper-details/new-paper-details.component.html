@@ -1,0 +1,30 @@
+<div [formGroup]="EventDetailsGroup">
+  <div class="row">
+    <div class="col-md-6">
+      <label>Event to submit *</label>
+      <select formControlName="EventToSubmit"
+              name="declineType"
+              class="form-control">
+        <option value=""
+                disabled>Select...
+        </option>
+        <option value="Berlin17">Berlin 2017</option>
+        <option value="Amsterdam17">Amsterdam 2017</option>
+        <option value="Dubai17">Dubai 2017</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+
+
+      <label>Language *</label>
+      <select formControlName="Language"
+              name="lang"
+              class="form-control">
+        <option value=""
+                disabled>Select...
+        </option>
+        <option value="Eng">English</option>
+      </select>
+    </div>
+  </div>
+</div>
