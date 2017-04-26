@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewPaperComponent } from './new-paper.component';
+import { ProfileComponent } from './profile.component';
 import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
@@ -8,7 +8,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     CommonModule,
     ReactiveFormsModule
   ],
-  declarations: [NewPaperComponent] ,
-  exports: [NewPaperComponent]
+  declarations: [ProfileComponent],
+  exports:[ProfileComponent]
 })
-export class NewPaperModule { }
+export class ProfileModule { }

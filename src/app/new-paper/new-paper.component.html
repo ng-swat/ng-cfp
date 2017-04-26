@@ -1,12 +1,13 @@
-
 <div class="container">
   <div class="row">
     <form [formGroup]="newPaperFormInterface" [ngClass]="{'submitted':ifSubmitted}" (ngSubmit)="sendForm()" class="form-horizontal">
+
       <fieldset>
 
         <h1>New Paper</h1>
 
         <hr>
+
 
         <div formGroupName="EventDetails">
           <div class="row">
@@ -20,6 +21,8 @@
               </select>
             </div>
             <div class="col-md-6">
+
+
               <label>Language *</label>
               <select formControlName="Language" name="lang" class="form-control">
                 <option value="" disabled>Select...</option>
@@ -39,12 +42,15 @@
             <div class="col-md-9">
               <label class="control-label">Title*</label>
               <input formControlName="Title" name="title" placeholder="Title" class="form-control input-md" required="" type="text">
+
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
+
               <label class="control-label">Abstract*</label>
               <textarea formControlName="Abstract" class="abstract-div" maxlength="600" rows="4" cols="50">
+
           </textarea>
             </div>
           </div>
@@ -63,7 +69,9 @@
         <hr>
 
 
+
         <div formGroupName="SessionDetails">
+
 
           <div class="row">
             <label class="col-md-6">Session type * ("lab" is only available in Rome and
@@ -71,11 +79,13 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+
               <select formControlName="SessionType" name="SessionType" class="form-control">
                 <option value="" disabled>Select...</option>
                 <option value="lab">lab</option>
                 <option value="meetup">meetup</option>
                 <option value="talk">talk</option>
+
               </select>
             </div>
           </div>
@@ -88,11 +98,13 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+
               <select formControlName="Level" name="Level" class="form-control">
                 <option value="" disabled>Select...</option>
                 <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="Advanced">Advanced</option>
+
               </select>
             </div>
           </div>
@@ -105,10 +117,12 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+
               <select formControlName="Length" name="Length" class="form-control">
                 <option value="" disabled>Select...</option>
                 <option value="30_min">30 Min</option>
                 <option value="40_min">40 Min</option>
+
               </select>
             </div>
           </div>
@@ -122,11 +136,13 @@
 
           </div>
           <div class="row">
+
             <label class="col-md-6">Tags</label>
           </div>
           <div class="row">
             <div class="col-md-6">
               <input formControlName="Tags" name="tags" placeholder="web,UX,UI,HTML5" class="form-control input-md" type="text">
+
             </div>
           </div>
         </div>
@@ -134,15 +150,19 @@
 
         <hr>
 
+
         <div formGroupName="CoSpeakers">
           <div class="row">
             <label>Co-Speakers</label>
+
           </div>
 
           <div class="row">
 
             <div class="col-md-4">
+
               <input (ngClick)="addToCoSpeakers()"  name="tags" placeholder="Co-Speakers email address" class="form-control" required=""
+
                      type="text">
             </div>
             <div class="col-md-2">
@@ -154,12 +174,15 @@
             </div>
           </div>
 
+
           <div class="row" *ngFor="let speaker of coSpeakersArr">{{speaker}}</div>
+
 
         </div>
 
 
         <hr>
+
 
 
         <div formGroupName="Requirements">
@@ -170,17 +193,20 @@
             <textarea formControlName="Requirements"
                       placeholder=" Please tell us if you have particular requirements, for your laptop, internet access, audio connection..."
                       maxlength="400" rows="4" cols="50"></textarea>
+
           </div>
           <div class="row">
             <small>400 characters max</small>
           </div>
 
           <div class="row">
+
             <label>Notes</label>
           </div>
           <div class="row">
             <textarea formControlName="Notes"
                       maxlength="400" rows="4" cols="50"></textarea>
+
           </div>
           <div class="row">
             <small>400 characters max</small>
@@ -205,9 +231,11 @@
               </button>
             </div>
 
+
             <label class="col-md-2 control-label"></label>
             <div class="col-md-2">
               <button type="submit" name="send" class="btn btn-default send-btn bottomButtons">Send</button>
+
             </div>
           </div>
         </div>

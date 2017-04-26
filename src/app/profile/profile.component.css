@@ -1,0 +1,13 @@
+
+.separator {
+  background: url(http://speaker.codemotionworld.com/layout/c4p/img/speaker/separator.png) no-repeat center bottom;
+  padding-bottom: 48px;
+  margin-bottom: 26px;
+  width: 100%;
+}
+
+input.ng-invalid,textarea.ng-invalid{
+  background-color: #ffd8d4;
+}
+
+

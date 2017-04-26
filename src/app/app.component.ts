@@ -11,7 +11,6 @@ import { Component } from '@angular/core';
     <cfp-password-recovery></cfp-password-recovery>
     <cfp-register></cfp-register>
  <cfp-new-paper></cfp-new-paper>
-
   `,
   styles: []
 })

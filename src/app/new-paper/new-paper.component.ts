@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormArray, FormControl, FormGroup , Validators} from '@angular/forms';
+import {FormGroup, FormControl, Validators, FormArray} from "@angular/forms";
 
 
 @Component({
@@ -64,5 +64,4 @@ export class NewPaperComponent implements OnInit {
   public addToCoSpeakers () {
     this.coSpeakersArr.push(this.CoSpeakers.value);
   }
-
 }
