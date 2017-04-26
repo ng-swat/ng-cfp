@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
-import {FormArray, FormControl, FormGroup , Validators} from '@angular/forms';
->>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
+import {FormGroup, FormControl, Validators, FormArray} from "@angular/forms";
 
 
 @Component({
@@ -10,15 +7,6 @@ import {FormArray, FormControl, FormGroup , Validators} from '@angular/forms';
   templateUrl: './new-paper.component.html',
   styleUrls: ['./new-paper.component.css']
 })
-<<<<<<< HEAD
-export class NewPaperComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-=======
 
 
 export class NewPaperComponent implements OnInit {
@@ -76,6 +64,4 @@ export class NewPaperComponent implements OnInit {
   public addToCoSpeakers () {
     this.coSpeakersArr.push(this.CoSpeakers.value);
   }
->>>>>>> d219d29bf66000bd99d4f6ebc0ace7ba626ba503
-
 }
