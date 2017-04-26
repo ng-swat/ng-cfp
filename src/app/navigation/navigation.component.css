@@ -1,0 +1,20 @@
+.avatar {
+  width: 60px;
+  height:60px;
+}
+.nav-top-header {
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+.nav-menu{
+  padding: 30px 10px;
+  background: #393939;
+  color:#fff;
+}
+li a {
+  display: inline;
+}
+.icon-menu {
+
+}
